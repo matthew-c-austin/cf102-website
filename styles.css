@@ -6,26 +6,26 @@ body {
 /* Style the header */
 header {
     overflow: hidden;
+    border: 10px solid #bd905a;
     background-color: #272424;
     padding: 10px 10px;
     text-align: left;
-    position: relative;
+
 }
 
 /* Style the logo image */
 header img {
+
     width: 24%;
     max-width: 100%;
     height: auto;
+    float: left;
 }
 
 /* Style the nav items */
 nav {
-    position: absolute;
-    padding: 10px 10px;
-    bottom: 0px;
-    right: 0px;
-    
+    float: right;
+    padding: 10px 10px; 
 }
 
 /* Style each nav bar link */
@@ -52,13 +52,63 @@ header a.active {
     color: white;
 }
 
+
+/* format the characterInfo section */
+#characterInfo {
+    overflow: hidden;
+    background-color: #272424;
+    color: #bd905a;
+    border: 10px solid #bd905a;
+    border-top: 0px;
+    padding: 10px 10px;
+}
+
+/* format characterDetails */
+#characterDetails {
+    padding: 10px 10px;
+}
+
+/* format characterDescription */
+#portrait {
+    overflow: hidden;
+    max-width: 25%;
+    border: 5px solid #bd905a;
+    float: left;
+    padding: 10px 10px;
+}
+
+/* Style the portrait image */
+#portrait img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* format characterDescription */
+#characterDescription {
+    overflow: hidden;
+    border: 5px solid #bd905a;
+    padding: 10px 10px;
+}
+
+.clearfix{
+    clear:both
+}
+/* format the characterInfo section */
+#backstory {
+    overflow: hidden;
+    float: left;
+    border: 5px solid #bd905a;
+    padding: 10px 10px;
+}
+
+
 /* format the audio section */
 #audio {
     overflow: hidden;
     background-color: #272424;
     color: #bd905a;
-    width: 100%;
     border: 10px solid #bd905a;
+    border-top: 0px;
     padding: 10px 10px;
     float: center;
 }
@@ -71,13 +121,13 @@ header a.active {
 /* format the intro audio element*/
 #intro {
     float: left;
-    text-align: left;
+    text-align: center;
     padding: 12px;
 }
 
 #intro figcaption {
-    font-size: 18px; 
-    padding: 12px;
+    font-size: 22px;
+    padding-bottom: 12px; 
 }
 
 #intro p {
@@ -86,17 +136,16 @@ header a.active {
     border-radius: 4px;
 }
 
-/* format the quest audio element*/
+/* format the intro audio element*/
 #quest {
     float: left;
-    display:inline;
-    text-align: left;
+    text-align: center;
     padding: 12px;
 }
 
 #quest figcaption {
-    font-size: 18px; 
-    padding: 12px;
+    font-size: 22px;
+    padding-bottom: 12px; 
 }
 
 #quest p {
@@ -104,6 +153,7 @@ header a.active {
     border: 5px solid #bd905a;
     border-radius: 4px;
 }
+
 /* Style the footer */
 footer {
     overflow: hidden;
