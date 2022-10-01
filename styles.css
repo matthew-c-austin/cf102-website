@@ -19,13 +19,16 @@ header img {
     height: auto;
 }
 
+/* Style the nav items */
 nav {
     position: absolute;
+    padding: 10px 10px;
     bottom: 0px;
     right: 0px;
     
 }
 
+/* Style each nav bar link */
 header a {
     float: left;
     color: #bd905a;
@@ -38,27 +41,82 @@ header a {
    
 }
 
+/* Change the background color on mouse-over */
 header a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
   
-  header a.active {
+/* Style the active/current link*/
+header a.active {
     color: white;
-  }
+}
 
+/* format the audio section */
+#audio {
+    overflow: hidden;
+    background-color: #272424;
+    color: #bd905a;
+    width: 100%;
+    border: 10px solid #bd905a;
+    padding: 10px 10px;
+    float: center;
+}
+
+/* format the audio section header*/
+#audio h2 {
+    text-align: center;
+}
+
+/* format the intro audio element*/
+#intro {
+    float: left;
+    text-align: left;
+    padding: 12px;
+}
+
+#intro figcaption {
+    font-size: 18px; 
+    padding: 12px;
+}
+
+#intro p {
+    padding: 12px;
+    border: 5px solid #bd905a;
+    border-radius: 4px;
+}
+
+/* format the quest audio element*/
+#quest {
+    float: left;
+    display:inline;
+    text-align: left;
+    padding: 12px;
+}
+
+#quest figcaption {
+    font-size: 18px; 
+    padding: 12px;
+}
+
+#quest p {
+    padding: 12px;
+    border: 5px solid #bd905a;
+    border-radius: 4px;
+}
+/* Style the footer */
 footer {
     overflow: hidden;
     background-color: #272424;
     width: 100%;
     padding: 10px 10px;
+    border: 10px solid #bd905a;
     float: left;
     text-align: center;
     padding: 12px;
     text-decoration: none;
     font-size: 18px; 
     line-height: 25px;
-    border-radius: 4px;
 }
 
 footer p{
