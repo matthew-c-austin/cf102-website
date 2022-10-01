@@ -3,13 +3,16 @@ body {
     margin: 0;
 }
 
+/* Style the header */
 header {
     overflow: hidden;
     background-color: #272424;
     padding: 10px 10px;
     text-align: left;
+    position: relative;
 }
 
+/* Style the logo image */
 header img {
     width: 24%;
     max-width: 100%;
@@ -17,7 +20,9 @@ header img {
 }
 
 nav {
-    float: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     
 }
 
