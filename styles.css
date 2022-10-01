@@ -13,6 +13,12 @@ header {
 
 }
 
+/* Style the greeting */
+#greeting {
+    font-size: 18px;
+    color: #bd905a;
+    text-align: center;
+}
 /* Style the logo image */
 header img {
 
@@ -73,7 +79,9 @@ header a.active {
     overflow: hidden;
     max-width: 25%;
     border: 5px solid #bd905a;
+    color: rgb(45, 34%, 54%);
     float: left;
+    height: 100%;
     padding: 10px 10px;
 }
 
@@ -87,6 +95,7 @@ header a.active {
 #characterDescription {
     overflow: hidden;
     border: 5px solid #bd905a;
+    height: 100%;
     padding: 10px 10px;
 }
 

@@ -8,6 +8,12 @@
         <title>NPC Village - Guildenstern</title>
     </head>
     <header>
+        <section id="greeting">
+            <script>
+                let userName = prompt("What is your name Adventurer?")
+                greeting = document.write ("Hello Adventurer " + userName + ", welcome to NPC Village")
+            </script>
+        </section>
         <img src="Images/NPC Village.gif" alt="NPC Village Logo">
         <!-- Links to other Characters and someone else's website -->
         <nav>
@@ -31,7 +37,7 @@
                         <ul >
                             <li>Occupation: Fixer, Socialite</li>
                             <li>Race/Gender: Human Male</li>
-                            <li>Age: 187</li>
+                            <li id="stringAge">Age: 187</li>
                             <li>Disposition: Jovial, loves drink, loves debauchery of all kinds really. He is fabulously wealthy from a life of adventuring, and he spends his retirement as a socialite and fixer. He is happy to trade war stories with adventurers </li>
                             <li>Appearance: A man of prodigious girth garbed in crushed green velvet pants and coat with gold tassels and buttons. A velvet cape of luminous gold  is tied with golden rope around his neck. His chubby, ruddy face is covered by blonde mutton chops and ringlets of blonde hair drape over his shoulders under a jaunty black hat tipped to the side. A sheathed rapier dangles from a baldric on the side of his wide hips.</li>
                         </ul>
@@ -79,4 +85,27 @@
             <p>&copy; Nick & Matt Villagers llc 2022</p>
         </footer>        
     </body>
+
+    <script>
+    window.addEventListener('load', function () {
+        // alert("It's loaded!")
+      })
+    </script>
+
+    <script id = "quiz">
+    window.onload = function() {       
+        setTimeout(function(){
+            let guessAge = prompt("What is the NPC's age?")
+            let stringAge = document.getElementById('stringAge').innerHTML
+            const age = stringAge.slice(5);
+            console.log(age)
+            if (guessAge == age) {
+                alert("You're a genius!")
+            } else {
+                alert("Nope!")
+            }
+        },30000); 
+    }
+    </script>
+
 </html>
