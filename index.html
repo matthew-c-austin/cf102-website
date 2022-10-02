@@ -10,6 +10,7 @@
     <header>
         <section id="greeting">
             <script>
+                /* This bit of code prompts the user for their name and displays a greeting in the header. */
                 let userName = prompt("What is your name Adventurer?")
                 greeting = document.write ("Hello Adventurer " + userName + ", welcome to NPC Village")
             </script>
@@ -17,7 +18,7 @@
         <img src="Images/NPC Village.gif" alt="NPC Village Logo">
         <!-- Links to other Characters and someone else's website -->
         <nav>
-            <a href="#">Guildenstern</a>
+            <a id="npcName" href="#">Guildenstern</a>
             <a href="https://nickmullaney.github.io/NPC-Village/index.html">Torvald the Magnificent</a>
             <a href="#">Illian Elsoma, "The Lightwielder"</a>
         </nav>
@@ -86,20 +87,27 @@
         </footer>        
     </body>
 
-    <script>
-    window.addEventListener('load', function () {
-        // alert("It's loaded!")
-      })
-    </script>
-
     <script id = "quiz">
-    window.onload = function() {       
+       window.onload = function() {  
+
+        /* This bit of code prompts the user to confirm that they want to change the NPC name, and if so
+        replaces all occurences of the previous name with the prompted name. */
+        let npcName = document.getElementById('npcName').innerHTML
+        changeName = confirm("Do you want to change the NPC's name? It is currently " + npcName + ".")
+        if (changeName === true) {
+            let npcName = prompt("What do you want your NPC's name to be?")
+            document.body.innerHTML = document.body.innerHTML.replaceAll('Guildenstern',npcName) 
+        } 
+        
+        /* This function waits for 30 seconds and then prompts the user to guess the NPC's age. 
+        It uses a string value from the document and slices off the non-numeric characters to compare against
+        the guess. */
         setTimeout(function(){
             let guessAge = prompt("What is the NPC's age?")
             let stringAge = document.getElementById('stringAge').innerHTML
             const age = stringAge.slice(5);
             console.log(age)
-            if (guessAge == age) {
+            if (guessAge === age) {
                 alert("You're a genius!")
             } else {
                 alert("Nope!")
