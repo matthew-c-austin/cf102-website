@@ -90,12 +90,13 @@
     <script id = "quiz">
        window.onload = function() {  
 
-        /* This bit of code prompts the user to confirm that they want to change the NPC name and, if so,
+        /* This bit of code prompts the user to confirm that they want to change the NPC name, and, if so,
         replaces all occurrences of the previous name with the prompted name. */
         let npcName = document.getElementById('npcName').innerHTML
         changeName = confirm("Do you want to change the NPC's name? It is currently " + npcName + ".")
         if (changeName === true) {
             let npcName = prompt("What do you want your NPC's name to be?")
+            document.head.innerHTML = document.head.innerHTML.replaceAll('Guildenstern',npcName)
             document.body.innerHTML = document.body.innerHTML.replaceAll('Guildenstern',npcName) 
         } 
         
@@ -105,7 +106,8 @@
         setTimeout(function(){
             let guessAge = prompt("What is the NPC's age?")
             let stringAge = document.getElementById('stringAge').innerHTML
-            const age = stringAge.slice(5);
+            const magicNumber = 5 /* Quick and dirty way to trim off the "Age: " text...it's the first JavaScript assginment this is fine right :)*/
+            const age = stringAge.slice(magicNumber);
             console.log(age)
             if (guessAge === age) {
                 alert("You're a genius!")

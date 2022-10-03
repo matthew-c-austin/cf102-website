@@ -19,6 +19,7 @@ header {
     color: #bd905a;
     text-align: center;
 }
+
 /* Style the logo image */
 header img {
 
@@ -57,7 +58,6 @@ header a:hover {
 header a.active {
     color: white;
 }
-
 
 /* format the characterInfo section */
 #characterInfo {
@@ -102,6 +102,7 @@ header a.active {
 .clearfix{
     clear:both
 }
+
 /* format the characterInfo section */
 #backstory {
     overflow: hidden;
@@ -109,7 +110,6 @@ header a.active {
     border: 5px solid #bd905a;
     padding: 10px 10px;
 }
-
 
 /* format the audio section */
 #audio {
