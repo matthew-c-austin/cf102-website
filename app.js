@@ -38,11 +38,8 @@
     the guess. */
     function ageQuiz() {
             let guessAge = prompt("What is the NPC's age?")
-            let stringAge = document.getElementById('stringAge').innerHTML
+            let age = document.getElementById('stringAge').innerHTML
             /* Quick and dirty way to trim off the "Age: " text...it's the first JavaScript assginment this is fine right :*) */
-            const magicNumber = 5 
-            const age = stringAge.slice(magicNumber);
-            console.log(age)
             if (guessAge === age) {
                 alert("You're a genius!")
             } else {
