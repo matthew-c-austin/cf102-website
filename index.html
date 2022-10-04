@@ -6,13 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NPC Village - Guildenstern</title>
+        <script  src="app.js"></script>
     </head>
     <header>
         <section id="greeting">
             <script>
-                /* This bit of code prompts the user for their name and displays a greeting in the header. */
-                let userName = prompt("What is your name Adventurer?")
-                greeting = document.write ("Hello Adventurer " + userName + ", welcome to NPC Village")
+                namePrompt()
             </script>
         </section>
         <img src="Images/NPC Village.gif" alt="NPC Village Logo">
@@ -88,33 +87,10 @@
     </body>
 
     <script id = "quiz">
+       /* Two functions are called at window.onload, one with a 30 sec delay*/
        window.onload = function() {  
-
-        /* This bit of code prompts the user to confirm that they want to change the NPC name, and, if so,
-        replaces all occurrences of the previous name with the prompted name. */
-        let npcName = document.getElementById('npcName').innerHTML
-        changeName = confirm("Do you want to change the NPC's name? It is currently " + npcName + ".")
-        if (changeName === true) {
-            let npcName = prompt("What do you want your NPC's name to be?")
-            document.head.innerHTML = document.head.innerHTML.replaceAll('Guildenstern',npcName)
-            document.body.innerHTML = document.body.innerHTML.replaceAll('Guildenstern',npcName) 
-        } 
-        
-        /* This function waits for 30 seconds and then prompts the user to guess the NPC's age. 
-        It uses a string value from the document and slices off the non-numeric characters to compare against
-        the guess. */
-        setTimeout(function(){
-            let guessAge = prompt("What is the NPC's age?")
-            let stringAge = document.getElementById('stringAge').innerHTML
-            const magicNumber = 5 /* Quick and dirty way to trim off the "Age: " text...it's the first JavaScript assginment this is fine right :)*/
-            const age = stringAge.slice(magicNumber);
-            console.log(age)
-            if (guessAge === age) {
-                alert("You're a genius!")
-            } else {
-                alert("Nope!")
-            }
-        },30000); 
+        npcNameQuery()
+        setTimeout(ageQuiz,30000); 
     }
     </script>
 
