@@ -11,8 +11,8 @@
 
     /* This function prompts the user for a generic name and returns that name if it is valid. */
     function namePrompt(namePromptQuery) {
-        let userName
-        valid = false
+        let userName;
+        valid = false;
         do {
             userName = prompt(namePromptQuery) 
             if (isValidName(userName)) {
@@ -44,7 +44,7 @@
         } 
     }
 
-    /* This function waits for 30 seconds and then prompts the user to guess the NPC's age. 
+    /* This function prompts the user to guess the NPC's age. 
     It uses a defined span in the html for the NPC's age. */
     function ageQuiz() {
             let guessAge = prompt("What is the NPC's age?")
