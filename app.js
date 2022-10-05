@@ -38,9 +38,9 @@
         let npcName = document.getElementById('npcName').innerHTML;
         const changeName = confirm("Do you want to change the NPC's name? It is currently " + npcName + ".")
         if (changeName === true) {
-            const npcName = namePrompt("What do you want your NPC's name to be?")
-            document.head.innerHTML = document.head.innerHTML.replaceAll('Guildenstern',npcName)
-            document.body.innerHTML = document.body.innerHTML.replaceAll('Guildenstern',npcName) 
+            const npcName = namePrompt("What do you want your NPC's name to be?");
+            document.head.innerHTML = document.head.innerHTML.replaceAll('Guildenstern',npcName);
+            document.body.innerHTML = document.body.innerHTML.replaceAll('Guildenstern',npcName) ;
         } 
     }
 
