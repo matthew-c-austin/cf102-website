@@ -163,6 +163,24 @@ header a.active {
     border-radius: 4px;
 }
 
+/* format the audio section */
+#coinsRating {
+    overflow: hidden;
+    background-color: #272424;
+    color: #bd905a;
+    border: 10px solid #bd905a;
+    text-align: center;
+    border-top: 0px;
+    padding: 10px 10px;
+    float: center;
+}
+
+/* Style the gold coin rating */
+.goldCoins {
+    max-width: 100px;
+    height: auto;
+}
+
 /* Style the footer */
 footer {
     overflow: hidden;
@@ -170,6 +188,7 @@ footer {
     width: 100%;
     padding: 10px 10px;
     border: 10px solid #bd905a;
+    border-top: 0px;
     float: left;
     text-align: center;
     padding: 12px;
